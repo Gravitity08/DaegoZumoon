@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<head>
+		<script defer> var price=0; 
+			function Update()
+				{
+				updateDisplay(printPrice);
+				}
+				
+			function printPrice()
+				{
+				document.write("총 가격은" + price + "원 입니다.");			
+				}
+		</script>
+		
+	</head>
+	
+	<body>
+	
+	<table border="1" bordercolor="blue" width ="500" height="300" align = "center" >
+	
+		<tr bgcolor="blue" align ="center">
+			<p><td colspan = "3" span style="color:white">메뉴</td></p>
+		</tr>
+		<tr align = "center" bgcolor="skybule">
+			<td><button><img src="라떼.png" width="150" height="150" onclick="AddRatte()"> <br>라떼 : 5000원 </button></td>
+			<td><button><img src="아메리.jpg" alt="My Image" width="150" height="150" onclick="AddAme()"><br>아메리카노 : 6000원</td>
+			<td><button><img src="카푸.jpg" alt="My Image" width="150" height="150" onclick="AddCapu()"><br>카푸치노 : 4000원</td>
+		</tr>
+		<script defer>
+			function AddRatte()
+			{
+			price=price+5000;
+			}
+			function AddAme()
+			{
+			price=price+6000;
+			}
+			function AddCapu()
+			{
+			price=price+4000;
+			}
+		</script>
+		<tr bgcolor="skybule">
+			<td align ="center"><button><img src="Qkd.jpg" width="150" height="150" onclick="AddBread()"><br>빵 : 1000원</td>
+			<td align ="center"><button><img src="과자.jpg" width="150" height="150" onclick="AddSnack()"><br>과자 : 500원</td>
+			<td align ="center"><button><img src="아이스.jpg" width="150" height="150" onclick="AddIce()"><br>아이스크림 : 1300원</td>
+		</tr>
+		<script defer>
+			function AddBread()
+			{
+			price=price+1000;
+			}
+			function AddSnack()
+			{
+			price=price+500;
+			}
+			function AddIce()
+			{
+			price=price+1300;
+			}
+		</script>
+		<tr bgcolor="skybule">
+			<td align ="center"><button><img src="김치.jpg" width="150" height="150" onclick="AddKimchi()"><br>김치 : 50000000원</td>
+			<td align ="center"><button><img src="두부.jpg" width="150" height="150" onclick="AddTofu()"><br>두부 : 1500원</td>
+			<td align ="center"><button><img src="뚝.jpg" width="150" height="150" onclick="AddTuck()"><br>뚝배기 : 7500원</td>
+		</tr>
+		<script defer>
+			function AddKimchi()
+			{
+			price=price+50000000;
+			}
+			function AddTofu()
+			{
+			price=price+1500;
+			}
+			function AddTuck()
+			{
+			price=price+7500;
+			}
+		</script>
+		<tr bgcolor="skybule">
+			<td align ="center"><button><img src="김치.jpg" width="150" height="150" onclick="AddKimchi2()"><br>김치2 : 500원</td>
+			<td align ="center"><button><img src="두부.jpg" width="150" height="150" onclick="AddTofu2()"><br>두부2 : 1000원</td>
+			<td align ="center"><button><img src="뚝.jpg" width="150" height="150" onclick="AddTTuk()"><br>뚝배기2 : 8000원</td>
+		</tr>
+		<script defer>
+			function AddKimchi2()
+			{
+			price=price+500;
+			}
+			function AddTofu2()
+			{
+			price=price+1000;
+			}
+			function AddTTuk()
+			{
+			price=price+8000;
+			}
+		</script>
+		<tr>
+	
+			<td colspan="2" align ="center" input type="button" onclick='alert("총 " + price +"원 입니다.")'>price</td>
+			<td align = "center" bgcolor="skyblue" input type='button' onclick='Sendprice();'><img src="OrderButton.jpg" width="150" height="150" border='0'></td>	
+		</tr>
+		<tr>
+	
+		</tr>
+		<tr>
+
+		</tr>
+		
+	</table>
+	<script defer language = "javascript">
+		function Sendprice()
+		{
+		price=price;
+		location.href="Order.html?" + price
+		}
+	</script>
+	</body>
+
+</html>
